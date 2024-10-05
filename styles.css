@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+
+    @screen md {
+      font-size: 16px;
+    }
+
+    @screen lg {
+      font-size: 18px;
+    }
+  }
+}
+
+@layer components {
+  /* Base content styles */
+  .content {
+    @apply text-lg font-sans leading-relaxed space-y-6 font-light;
+
+    h1 {
+      @apply text-3xl font-semibold font-unbounded bg-[#104071] inline-block text-transparent bg-clip-text;
+    }
+
+    h2 {
+      @apply text-xl font-medium font-unbounded bg-[#104071] inline-block text-transparent bg-clip-text;
+    }
+
+    p {
+      @apply leading-relaxed;
+    }
+  }
+
+  /* Hand-drawn border styles */
+  .sketched {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
+
+  .sketched:hover {
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-left-radius: 225px 15px;
+    border-bottom-right-radius: 15px 225px;
+  }
+
+  .sketched-alt {
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+  }
+}
+
+@layer elements {
+  sup.footnote {
+    @apply text-xs text-gray-500 underline underline-offset-4 ml-1;
+  }
+
+  sup.footnote:hover {
+    @apply border-gray-700 cursor-pointer;
+  }
+}

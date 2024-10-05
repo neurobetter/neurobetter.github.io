@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries""></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/9f3d334f4a.css" crossorigin="anonymous">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#104071">
+  <meta name="apple-mobile-web-app-title" content="neurobetter">
+  <meta name="application-name" content="neurobetter">
+  <meta name="msapplication-TileColor" content="#104071">
+  <meta name="theme-color" content="#104071">
+  
+  <script defer="true">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+            unbounded: ['Unbounded', ...defaultTheme.fontFamily.sans],
+          },
+
+        },
+      },
+      plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/container-queries'),
+      ],
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" type="text/tailwindcss">
+</head>
+<body class="bg-[#000a4c] flex flex-col min-h-screen overflow-x-hidden relative w-full"></body>
+  <div class="relative bg-[url('images/header-swirl.png')] bg-no-repeat bg-[22rem_0] pl-12 pr-12 pt-12">
+    <div class="relative">
+      <nav class="relative" aria-label="Global">
+        <!-- Main Header -->
+        <div class="lg:h-20 h-34 grid grid-cols-3" id="header-container">
+          <a href="/" class="h-full md:col-span-2 col-span-3">
+            <img src="images/neurobetter-logo.png" class="h-7 mb-3">
+            <p class="text-[#fdfdfe] font-light text-xl font-unbounded">We’re a charity improving mental health for neurodivergent people.</p>
+          </a>
+          <!-- <div class="mt-5 md:col-span-1 col-span-3 md:text-right">
+            <a href="#" class="ml-8 mb-4 px-4 py-3 text-lg font-semibold text-teal-700 border-2 sketched border-teal-700 bg-teal-50 hover:bg-teal-100">Donate</a>
+          </div> -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="my-8 pb-4">
+      <p class="font-unbounded text-3xl text-[#fdfdfe] font-semibold">Being neurodivergent makes it harder to manage your mental health.</p>
+      <p class="mt-4 mb-8 font-unbounded text-3xl text-[#fdfdfe] font-semibold">We can help.</p>
+      <p class="mt-4 text-[#fdfdfe] text-2xl">Through lived experience, we support the mental health of neurodivergent people, raise awareness and save lives.</p>
+      <p class="mt-4 text-[#fdfdfe] text-2xl">Our website will be launching soon. For more information, email us on <a href="mailto:team@neurobetter.org" class="underline">team@neurobetter.org</a>.</p>
+    </div>
+  </div>
+
+  <footer class="mt-auto bg-footer min-h-60 p-4">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 lg:px-8 mb-6">
+      <div class="mt-6 flex justify-center space-x-10">
+        <a href="https://instagram.com/neurobetterapp" class="text-white hover:text-[#eeff99]">
+          <span class="sr-only">Instagram</span>
+          <i class="text-xl fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/neurobetterapp" class="text-white hover:text-[#eeff99]">
+          <span class="sr-only">Facebook</span>
+          <i class="text-xl fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://linkedin.com/company/neurobetter" class="text-white hover:text-[#eeff99]">
+          <span class="sr-only">LinkedIn</span>
+          <i class="text-xl fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/neurobetterapp" class="text-white hover:text-[#eeff99]">
+          <span class="sr-only">X/Twitter</span>
+          <i class="text-xl fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://pinterest.com/neurobetter" class="text-white hover:text-[#eeff99]">
+          <span class="sr-only">Pinterest</span>
+          <i class="text-xl fa-brands fa-pinterest"></i>
+        </a>
+      </div>
+    </div>
+    <p class="-mt-2 mb-8 text-center text-sm leading-5 text-white">Copyright &copy; 2024, <strong>neuro</strong>better<br>
+      <br>A registered charity in England (#1210347)
+      <br>A not-for-profit company, limited by guarantee (#15612856)
+      <br><br>
+      8 High Street, Brentwood, Essex, CM14 4AB, England
+    </p>
+  </footer>
+</body>
+</html>
